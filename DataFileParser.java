@@ -33,10 +33,10 @@ public class DataFileParser implements mySplit{
 			String genre = result[10];
 			String description = result[11];
 			//identify the data type
-			if (type.equals("TV Show")) {
+			if ("TV Show".equals(type)) {
 				mediaCollection.add(new Series(title, director, cast, country, release_year, rating, duration, genre, description));
 			}
-			if (type.equals("Movie")) {
+			if ("Movie".equals(type)) {
 				mediaCollection.add(new Movie(title, director, cast, country,  release_year, rating, duration, genre, description));
 			}
 		}

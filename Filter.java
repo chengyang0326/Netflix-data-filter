@@ -97,25 +97,25 @@ public class Filter {//class for filter object
             }
             int numToCompare = Integer.parseInt(numberString);
 
-            if (comparatorString.equals(">=")) {
+            if (">=".equals(comparatorString)) {
                 if (Integer.parseInt(targetMedia.getReleaseYear()) >= numToCompare) {
                     return true;
                 }
             }
-            else if (comparatorString.equals("<=")) {
+            else if ("<=".equals(comparatorString)) {
                 if (Integer.parseInt(targetMedia.getReleaseYear()) <= numToCompare) {
 
                     return true;
                 }
-            } else if (comparatorString.equals("<")) {
+            } else if ("<".equals(comparatorString)) {
                 if (Integer.parseInt(targetMedia.getReleaseYear()) < numToCompare) {
                     return true;
                 }
-            } else if (comparatorString.equals(">")) {
+            } else if (">".equals(comparatorString)) {
                 if (Integer.parseInt(targetMedia.getReleaseYear()) > numToCompare) {
                     return true;
                 }
-            } else if (comparatorString.equals("=")) {
+            } else if ("=".equals(comparatorString)) {
                 if (Integer.parseInt(targetMedia.getReleaseYear()) == numToCompare) {
                     return true;
                 }
@@ -137,24 +137,24 @@ public class Filter {//class for filter object
             if(targetMedia instanceof Movie){
                 String toCompare[] = ((Movie) targetMedia).runtime.split(" ");
                 int intToCompare = Integer.parseInt(toCompare[0]);
-                if (comparatorString.equals(">=")) {
+                if (">=".equals(comparatorString)) {
                     if (intToCompare >= numToCompare) {
                         return true;
                     }
                 }
-                else if (comparatorString.equals("<=")) {
+                else if ("<=".equals(comparatorString)) {
                     if (intToCompare <= numToCompare) {
                         return true;
                     }
-                } else if (comparatorString.equals("<")) {
+                } else if ("<".equals(comparatorString)) {
                     if (intToCompare < numToCompare) {
                         return true;
                     }
-                } else if (comparatorString.equals(">")) {
+                } else if (">".equals(comparatorString)) {
                     if (intToCompare > numToCompare) {
                         return true;
                     }
-                } else if (comparatorString.equals("=")) {
+                } else if ("=".equals(comparatorString)) {
                     if (intToCompare == numToCompare) {
                         return true;
                     }
@@ -179,24 +179,24 @@ public class Filter {//class for filter object
             if(targetMedia instanceof Series){
                 String toCompare[] = ((Series) targetMedia).duration.split(" ");
                 int intToCompare = Integer.parseInt(toCompare[0]);
-                if (comparatorString.equals(">=")) {
+                if (">=".equals(comparatorString)) {
                     if (intToCompare >= numToCompare) {
                         return true;
                     }
                 }
-                else if (comparatorString.equals("<=")) {
+                else if ("<=".equals(comparatorString)) {
                     if (intToCompare <= numToCompare) {
                         return true;
                     }
-                } else if (comparatorString.equals("<")) {
+                } else if ("<".equals(comparatorString)) {
                     if (intToCompare < numToCompare) {
                         return true;
                     }
-                } else if (comparatorString.equals(">")) {
+                } else if (">".equals(comparatorString)) {
                     if (intToCompare > numToCompare) {
                         return true;
                     }
-                } else if (comparatorString.equals("=")) {
+                } else if ("=".equals(comparatorString)) {
                     if (intToCompare == numToCompare) {
                         return true;
                     }
@@ -205,7 +205,7 @@ public class Filter {//class for filter object
             }
         }
         else{
-            if(target.equals("") || target.equals(" ")){//else if statements for if no previous conditions match
+            if("".equals(target) || " ".equals(target)){//else if statements for if no previous conditions match
                 return false;
             }
             else if(targetMedia.title.toLowerCase().contains(target)){
